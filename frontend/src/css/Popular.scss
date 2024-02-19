@@ -1,0 +1,153 @@
+@import "../css/Colors.scss";
+.section {
+  padding-top: 15rem;
+  .secContainer {
+    .secHeader {
+      flex-direction: column;
+      align-items: center;
+      align-items: flex-start;
+      gap: 10px;
+      .textDev {
+        .secTitle {
+          color: $blackColor;
+          line-height: 1.5rem;
+          padding-bottom: 0.5em;
+        }
+        p {
+          font-size: 13px;
+          color: $textColor;
+          font-weight: 500;
+        }
+      }
+      .iconsDev {
+        gap: 0.5rem;
+        .icon {
+          padding: 0.5rem;
+          background: $greyText;
+          border-radius: 50%;
+          font-size: 2.5rem;
+          transition: all 0.7s ease;
+          color: $whiteColor;
+          &:hover {
+            background: $blackColor;
+          }
+        }
+        .leftIcon {
+          background: $blackColor;
+          color: $whiteColor;
+          &:hover {
+            background: $greyText;
+            color: $BlackColor;
+          }
+        }
+      }
+    }
+  }
+  .mainContent {
+    padding: 2rem 0;
+    gap: 1rem;
+    .singleDestinalion {
+      overflow: hidden;
+      border-radius: 1rem;
+      box-shadow: $inputColor;
+      .destImage {
+        width: 100%;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .overlayInfo {
+          position: absolute;
+          display: flex;
+          align-items: flex-start;
+          padding: 0;
+        //   padding: 1rem 1.5rem;
+          bottom: 0;
+          width: 100%;
+        //   height: 100%;
+          height:0;
+          overflow: hidden;
+          justify-content: center;
+          flex-direction: column;
+          background: linear-gradient(
+            rgba(0, 0, 0, 0.846),
+            rgba(0, 0, 0, 0.759)
+          );
+          h3 {
+            color: $whiteColor;
+            font-weight: 600;
+          }
+          p {
+            color: $whiteColor;
+            opacity: 0.7;
+            font-size: 13px;
+          }
+          .icon {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            padding: 0.5rem;
+            font-size: 2.5rem;
+            border-radius: 50%;
+            background: $PrimaryColor;
+            color: $whiteColor;
+            border: 1px solid transparent;
+            transition: 0.3s ease;
+            &:hover {
+              background: $blackColor;
+              border: 1px solid $PrimaryColor;
+              color: $whiteColor;
+            }
+          }
+        }
+      }
+      .destFooter {
+        padding: 1rem;
+        .number {
+          font-size: 2rem;
+          font-weight: 700;
+          color: $blackColor;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 45%;
+            right: -150%;
+            height: 5px;
+            width: 45px;
+            border-radius: 1rem;
+            background: $PrimaryColor;
+          }
+        }
+        .destText {
+          justify-content: space-between;
+          h6 {
+            color: $blackColor;
+            font-size: 1rem;
+          }
+          .flex {
+            font-size: 1rem;
+            font-weight: 600;
+            align-items: flex-start;
+            transform: translateY(5px);
+            .icon {
+              color: $PrimaryColor;
+            }
+          }
+        }
+      }
+      &:hover {
+        .overlayInfo {
+          overflow: visible;
+          padding: 1rem 1.5rem;
+          height: 100%;
+          transition: all .3s ease;
+        }
+      }
+    }
+  }
+}

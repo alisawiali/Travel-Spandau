@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* background-attachment: fixed; */
+  transition: .3s ease;
+}
+
+/* Colors */
+:root {
+  --PrimaryColor: hsl(26, 93%, 50%);
+  --HoverColor: hsl(26, 90%, 24%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whitColorDeam: hsl(0, 0%, 96%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: hsl(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%)
+}
+
+
+/* Default Styling ( Some of the code might 
+not mean sense to you at this 
+point but hold on we shall see how it gets into play later...)
+*/
+
+a {
+  text-decoration: none;
+
+}
+
+
+
+
+li {
+  list-style-type: none;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.container {
+  margin-left: 1.5em;
+  margin-right: 1.5rem;
+}
+
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+
+}
+
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.4em 1.5rem;
+  background: var(--PrimaryColor);
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+.btn a {
+  color: var(--whiteColor);
+  font-weight: 500;
+}
+
+.btn:hover a {
+  color: var(--whiteColor);
+
+}
+
+.secInter {
+  max-width: 70%;
+  text-align: center;
+  margin: 0 auto 2rem;
+}
+
+.secIntro .secTitle {
+  color: var(--blackColor);
+  line-height: 1.5rem;
+  padding-bottom: 0.5em;
+}
+
+.secIntro {
+  font-size: 13px;
+  color: var(--textColor);
+  font-weight: 500;
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+}
+
+input {
+  font-size: 100%;
+}

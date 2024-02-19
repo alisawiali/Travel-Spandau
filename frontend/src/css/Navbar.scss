@@ -1,0 +1,102 @@
+@import "../css/Colors.scss";
+.navBarSection {
+  .header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    z-index: 1000; // Above the modal, below the map
+    width: 100%;
+    padding:1rem 1rem;
+
+    .logoDev {
+      .logo {
+        color: $whiteColor;
+        font-weight: 500;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        .icon {
+          color: $PrimaryColor;
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .navBar {
+        background: rgb(237, 237, 237);
+        position: fixed; /* Änderung von 'absolute' zu 'fixed', um die Navbar immer sichtbar zu halten */
+        height:max-content;
+        padding: 1rem;
+        top: 0;
+        left: -500%;
+        transition: 0.5s ease;
+        z-index: 1000;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(209, 209, 209, 0.904);
+        .navLists {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          .navItem {
+            padding: 0.5rem 0;
+            .navlink {
+              color: $textColor;
+              font-size: 0.9rem;
+              font-weight: 600;
+              &:hover {
+                color: $PrimaryColor;
+              }
+            }
+          }
+          .headersBtns {
+            flex-direction: column;
+            .btn {
+              margin-top: 1rem;
+              a {
+                font-weight: 600;
+                &:hover {
+                  color: $whiteColor;
+                }
+              }
+            }
+            .loginBtn {
+              background: none;
+              border: 1px solid $PrimaryColor;
+              a {
+                color: $PrimaryColor;
+                &:hover{
+                    color:$HoverColor;
+                 
+                }
+                  
+              }
+            }
+          }
+        }
+        .closeNavbar{
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: $PrimaryColor;
+            &:hover .icon{
+                color: $HoverColor;
+            }
+        }
+      }
+      .activeNavbar{
+        left: 0;
+      }
+    }
+    .toggelNavbae{
+        .icon{
+            font-size: 25px;
+            color: $whiteColor;
+            &:hover{
+                color: $PrimaryColor
+            }
+        }
+    }
+  }
+}

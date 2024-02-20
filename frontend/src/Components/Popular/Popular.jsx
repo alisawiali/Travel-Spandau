@@ -5,6 +5,8 @@ import { BsDot } from "react-icons/bs";
 
 //  Import the Image ====================
 import imgHome from "../../assets/wohnung-schnee.jpeg";
+import Data from "./popular.js";
+
 const Popular = () => {
   return (
     <section className="popular section container">
@@ -19,32 +21,36 @@ const Popular = () => {
           </div>
           <div className="iconsDev flex">
             <BsArrowLeftShort className="icon leftIcon" />
-            <BsArrowRightShort className="icon" />
+            <BsArrowRightShort className="icon rightIcon" />
           </div>
         </div>
-        <div className="mainContent grid">
-          <div className="singleDestinalion">
-            <div className="destImage">
-              <img src={imgHome} alt="Image Title" />
-              <div className="overlayInfo">
-                <h3>Some text</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <BsArrowRightShort className="icon" />
+        <div className="mainContent ">
+          {Data.map(({ id, imgScr, destTitle, location, grade }) => {
+            return (
+              <div className="singleDestinalion" key={id}>
+                <div className="destImage">
+                  <img src={imgScr} alt="Image Title" />
+                  <div className="overlayInfo">
+                    <h3>{destTitle}</h3>
+                    <p>{location}</p>
+                    <BsArrowRightShort className="icon" />
+                  </div>
+                </div>
+                <div className="destFooter">
+                  <div className="number">0{id}</div>
+                  <div className="destText flex">
+                    <h6>{location}</h6>
+                    <span className="flex">
+                      <span className="dot">
+                        <BsDot className="icon" />
+                      </span>
+                      Dot
+                    </span>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="destFooter">
-              <div className="number">01</div>
-              <div className="destText flex">
-                <h6>Lodnon</h6>
-                <span className="flex">
-                  <span className="dot">
-                    <BsDot className="icon" />
-                  </span>
-                  Dot
-                </span>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>

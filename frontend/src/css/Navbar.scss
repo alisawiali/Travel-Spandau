@@ -5,11 +5,29 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
+    background: rgba(216, 213, 213, 0.666);
     z-index: 1000; // Above the modal, below the map
     width: 100%;
-    padding:1rem 1rem;
+    padding: 1rem 1rem;
 
+    .navLists {
+      display: flex;
+      .navItem {
+        margin-left: 1rem;
+        a {
+          color: $blackColor
+        }
+      }
+      .headersBtns {
+        margin-left: 1rem;
+      }
+    }
+    .toggelNavbae {
+      display: none;
+    }
+    .closeNavbar {
+      display: none;
+    }
     .logoDev {
       .logo {
         color: $whiteColor;
@@ -19,14 +37,21 @@
         justify-content: center;
         .icon {
           color: $PrimaryColor;
+          font-size: 1.7em;
+          margin-right: 1px;
         }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .toggelNavbae {
+        display: block;
       }
     }
     @media screen and (max-width: 768px) {
       .navBar {
         background: rgb(237, 237, 237);
-        position: fixed; /* Änderung von 'absolute' zu 'fixed', um die Navbar immer sichtbar zu halten */
-        height:max-content;
+        position: fixed;
+        height: max-content;
         padding: 1rem;
         top: 0;
         left: -500%;
@@ -34,6 +59,10 @@
         z-index: 1000;
         width: 100%;
         box-shadow: 0 2px 4px rgba(209, 209, 209, 0.904);
+
+        .closeNavbar {
+          display: block;
+        }
         .navLists {
           flex-direction: column;
           justify-content: center;
@@ -56,6 +85,7 @@
               margin-top: 1rem;
               a {
                 font-weight: 600;
+                color: $blackColor;
                 &:hover {
                   color: $whiteColor;
                 }
@@ -66,37 +96,40 @@
               border: 1px solid $PrimaryColor;
               a {
                 color: $PrimaryColor;
-                &:hover{
-                    color:$HoverColor;
-                 
+                &:hover {
+                  color: $HoverColor;
                 }
-                  
               }
             }
           }
         }
-        .closeNavbar{
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            color: $PrimaryColor;
-            &:hover .icon{
-                color: $HoverColor;
-            }
+        .closeNavbar {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          color: $PrimaryColor;
+          &:hover .icon {
+            color: $HoverColor;
+          }
         }
       }
-      .activeNavbar{
+      .activeNavbar {
         left: 0;
       }
     }
-    .toggelNavbae{
-        .icon{
-            font-size: 25px;
-            color: $whiteColor;
-            &:hover{
-                color: $PrimaryColor
-            }
+    .toggelNavbae {
+      .icon {
+        font-size: 25px;
+        color: $whiteColor;
+        &:hover {
+          color: $PrimaryColor;
         }
+      }
     }
+  }
+
+  .activeNavbar {
+    background: $bgHeader;
+    box-shadow: 0px 2px 8px rgba(165, 163, 163, 0.45);
   }
 }

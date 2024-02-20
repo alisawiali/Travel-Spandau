@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { SiYourtraveldottv } from "react-icons/si";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { TbGridDots } from "react-icons/tb";
+import { NavLink } from "react-router-dom";
 // M 27
 const Navbar = () => {
   const [active, setActive] = useState("navBar");
@@ -14,9 +15,20 @@ const Navbar = () => {
   const hideNavBar = () => {
     setActive("navBar");
   };
+
+  // code to add background color to the header
+  const [transpernt, setTranspernt] = useState("header");
+  const addBg = () => {
+    if (window.scrollY >= 340) {
+      setTranspernt("header activeNavbar");
+    } else {
+      setTranspernt("header");
+    }
+  };
+  window.addEventListener("scroll", addBg);
   return (
     <div className="navBarSection">
-      <div className="header">
+      <div className={transpernt}>
         <div className="logoDev">
           <a href="#" className="logo">
             <h1>
@@ -28,30 +40,23 @@ const Navbar = () => {
         <div className={active}>
           <ul className="navLists flex">
             <li className="navItem">
-              <a href="#" className="navlink">
-                Home
-              </a>
+              <NavLink to="/">Home</NavLink>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navlink">
-                Products
-              </a>
+              <NavLink to="/popular">Popular</NavLink>
             </li>
             <li className="navItem">
-              <a href="#" className="navlink">
-                Resoues
-              </a>
+              <NavLink to="/offers">Offers</NavLink>
             </li>
             <li className="navItem">
-              <a href="#" className="navlink">
-                Contacts
-              </a>
+              <NavLink to="/contacts">Contacts</NavLink>
             </li>
             <li className="navItem">
-              <a href="#" className="navlink">
-                Blog
-              </a>
+              <NavLink to="/blog">Blog</NavLink>
+            </li>
+            <li className="navItem">
+              <NavLink to="/about">About</NavLink>
             </li>
             <div className="headersBtns flex">
               <button className="btn loginBtn">

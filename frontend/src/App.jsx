@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
   Navbar,
   Home,
-  Blog,
   Offers,
   Popular,
   About,
@@ -22,10 +21,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/popular" element={<Popular />} />
           <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
           <Route path="/offers" element={<Offers />} />
           <Route path="/contacts" element={<Contacts />} />
-
           <Route path="*" element={<ErroMassage />} />
         </Routes>
         <Footer />

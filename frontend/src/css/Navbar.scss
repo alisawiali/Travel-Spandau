@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-between;
     background: rgba(216, 213, 213, 0.666);
-    z-index: 1000; // Above the modal, below the map
+    z-index: 1000;
     width: 100%;
     padding: 1rem 1rem;
 
@@ -15,7 +15,7 @@
       .navItem {
         margin-left: 1rem;
         a {
-          color: $blackColor
+          color: $blackColor;
         }
       }
       .headersBtns {
@@ -33,6 +33,7 @@
         color: $whiteColor;
         font-weight: 500;
         cursor: pointer;
+
         align-items: center;
         justify-content: center;
         .icon {

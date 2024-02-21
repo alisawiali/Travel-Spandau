@@ -1,0 +1,126 @@
+@import "../css/Colors.scss";
+.footer {
+  background-color: $greyBg;
+  padding: 2rem 1rem;
+  .secContainer {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logoDev {
+      .footerLogo {
+        padding-bottom: 0.5rem;
+        .logo {
+          color: $blackColor;
+          font-weight: 500;
+          cursor: pointer;
+          .icon {
+            color: $PrimaryColor;
+            margin: 0 1rem;
+          }
+        }
+      }
+      .socials {
+        .icon {
+          color: $blackColor;
+          margin: 1rem;
+          &:hover {
+            color: $PrimaryColor;
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+    .footerLinks {
+      .linkTitle {
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+      li {
+        cursor: pointer;
+        padding: 0.2rem 0;
+        a {
+          font-size: 1rem;
+          margin: 0.4rem 0;
+          color: $textColor;
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+}
+//   Responev @media
+@media screen and (max-width: 768px) {
+  .footer {
+    background-color: $greyBg;
+    padding: 2rem 0;
+    margin-top: 4rem;
+
+    .secContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: center;
+      .logoDev {
+        .footerLogo {
+          padding-bottom: 0.5rem;
+          .logo {
+            color: $blackColor;
+            font-weight: 500;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 0.5rem;
+            .icon {
+              font-size: 2rem;
+              color: $PrimaryColor;
+              margin-right: 0.5rem;
+            }
+          }
+        }
+        .socials {
+          gap: 0.5rem;
+          margin: auto;
+          justify-content: center;
+          .icon {
+            font-size: 2rem;
+            background: $PrimaryColor;
+            border-radius: 50%;
+            padding: 8px;
+            color: $whitColor;
+            transition: all 0.5s ease;
+            margin: 0.3rem;
+            &:hover {
+              background: $blackColor;
+            }
+          }
+        }
+      }
+      .footerLinks {
+        display: grid;
+        row-gap: 0.2rem;
+        .linkTitle {
+          padding-bottom: 0.5rem;
+          color: $blackColor;
+          font-weight: 700;
+        }
+        li {
+          &:hover {
+            transform: translateY(-2px);
+            a {
+              color: $PrimaryColor;
+            }
+          }
+        }
+        a,
+        .phone,
+        .email {
+          color: $textColor;
+          font-size: 13px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
-import img1 from "../../assets/Peru-Machu Picchu.png";
-import img2 from "../../assets/Mexico-Guanajuato.jpeg";
-import img3 from "../../assets/Cambodia.jpeg";
-import img4 from "../../assets/India-Taj Mahal.png";
+import img1 from "../../assets/Popular/Peru-Machu Picchu.png";
+import img2 from "../../assets/Popular/Mexico-Guanajuato.jpeg";
+import img3 from "../../assets/Popular/Cambodia.jpeg";
+import img4 from "../../assets/Popular/India-Taj Mahal.png";
 
 let Data = [
   {

@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BsArrowLeftShort } from "react-icons/bs";
 import { BsArrowRightShort } from "react-icons/bs";
 import { BsDot } from "react-icons/bs";
+//  Aos
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 //  Import the Image ====================
 import imgHome from "../../assets/wohnung-schnee.jpeg";
 import Data from "./popular.js";
 
 const Popular = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <section className="popular section container">
-      <div className="secContainer">
+      <div className="secContainer" data-aos="fade-left">
         <div className="secHeader flex">
           <div className="textDev">
             <h2 className="secTitle">Popular Destionation</h2>

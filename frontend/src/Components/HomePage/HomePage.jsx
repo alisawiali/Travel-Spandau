@@ -1,16 +1,30 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const HomePage = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <div>
       <section className="home">
         <div className="secContainer container">
           <div className="homeText">
-            <h1 className="title">Plan your Trip With Travel Dot</h1>
-            <p className="subTitl">
+            <h1 data-aos="fade-down" className="title">
+              Plan your Trip With Travel Dot
+            </h1>
+            <p
+              className="subTitl"
+              data-aos="fade-down"
+              data-aos-duration="2500"
+            >
               Travel to your fvuorite with respectful of the enviroment
             </p>
-            <button className="btn">
+            <button
+              className="btn"
+              data-aos="fade-down"
+              data-aos-duration="3000"
+            >
               <a href="#">Explore Now</a>
             </button>
           </div>

@@ -38,7 +38,7 @@ li {
 }
 
 .section {
-  padding: 4rem 0 2rem;
+  padding: 1rem 0 2rem;
 }
 
 .container {
@@ -82,8 +82,8 @@ li {
   color: var(--whiteColor);
 
 }
-
-.secInter {
+/*  We styles this clases earlier.... */
+.secIntro {
   max-width: 70%;
   text-align: center;
   margin: 0 auto 2rem;

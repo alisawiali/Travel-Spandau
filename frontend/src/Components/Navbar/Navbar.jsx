@@ -52,9 +52,7 @@ const Navbar = () => {
             <li className="navItem">
               <NavLink to="/contacts">Contacts</NavLink>
             </li>
-            <li className="navItem">
-              <NavLink to="/blog">Blog</NavLink>
-            </li>
+
             <li className="navItem">
               <NavLink to="/about">About</NavLink>
             </li>

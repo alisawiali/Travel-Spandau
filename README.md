@@ -1,4 +1,4 @@
-# Tourist Location Explorer
+# Travel-Agency-Website
 
 ## Description
 Tourist Location Explorer is a React application designed to allow users to browse tourist locations in different countries.
